@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Datos Simulados para el Dashboard de la Cafetería
     const datosPedidos = {
         dias: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
         pedidosDiarios: [120, 155, 130, 185, 250, 280, 190], // Cantidad de pedidos
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ventasProductos: [35, 25, 15, 10, 15] // Porcentajes o cantidad relativa
     };
 
-    // 1. Métrica Principal: Total de Pedidos (Requisito Línea Total - Tarjeta)
     function mostrarTotalPedidos() {
         const total = datosPedidos.pedidosDiarios.reduce((sum, current) => sum + current, 0);
         const elementoTotal = document.getElementById('total-pedidos');
@@ -17,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // 2. Gráfico de Barras: Ventas Diarias
+    // Gráfico de Barras
     function crearGraficoBarras() {
         const ctxBar = document.getElementById('barChart');
 
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Gráfico Circular (Dona): Distribución de Productos
+    // Gráfico Circular 
     function crearGraficoCircular() {
         const ctxPie = document.getElementById('pieChart');
 
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Gráfico de Línea: Tendencia de Visitas Semanales (Implementando el requisito de Línea Total como gráfico)
+    // Gráfico de Línea
     function crearGraficoLinea() {
         const ctxLine = document.getElementById('lineChart');
 
@@ -109,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ejecutar todas las funciones para cargar el dashboard
     mostrarTotalPedidos();
     crearGraficoBarras();
     crearGraficoCircular();
     crearGraficoLinea(); 
+
 });
