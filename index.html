@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕ Dashboard de Pedidos de Cafetería (IHC)</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Estadísticas de Pedidos de la Cafetería Online ☕</h1>
+    </header>
+
+    <main class="dashboard-grid">
+        
+        <div class="card total-card">
+            <h2>Total de Pedidos en la Última Semana</h2>
+            <p id="total-pedidos">Cargando...</p> 
+        </div>
+
+        <div class="card chart-container">
+            <h3>Ventas Diarias (Últimos 7 días)</h3>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="card chart-container">
+            <h3>Distribución de Productos Más Vendidos</h3>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="card chart-container">
+            <h3>Tendencia de Visitas Semanales</h3>
+            <canvas id="lineChart"></canvas>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
