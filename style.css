@@ -1,14 +1,13 @@
-/* Estilos generales y fuente */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7f6; /* Fondo suave */
+    background-color: #f4f7f6; 
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #5d4037; /* Marrón de café */
+    background-color: #5d4037; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -20,10 +19,8 @@ h1 {
     font-size: 1.8em;
 }
 
-/* Contenedor principal del Dashboard */
 .dashboard-grid {
     display: grid;
-    /* 2 columnas para pantallas grandes */
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 20px;
@@ -31,7 +28,6 @@ h1 {
     margin: 20px auto;
 }
 
-/* Estilo para las tarjetas/paneles individuales */
 .card {
     background-color: white;
     padding: 20px;
@@ -40,23 +36,21 @@ h1 {
 }
 
 .total-card {
-    /* Ocupa el ancho completo en la parte superior */
     grid-column: 1 / -1; 
     text-align: center;
-    background-color: #e0f2f1; /* Color suave para destacar */
+    background-color: #e0f2f1; 
 }
 
 #total-pedidos {
     font-size: 3em;
     font-weight: bold;
-    color: #00796b; /* Un color de acento */
+    color: #00796b; 
     margin-top: 5px;
 }
 
-/* Media Query para hacerlo responsivo en móviles */
 @media (max-width: 768px) {
     .dashboard-grid {
-        /* En pantallas pequeñas, solo una columna */
         grid-template-columns: 1fr;
     }
+
 }
